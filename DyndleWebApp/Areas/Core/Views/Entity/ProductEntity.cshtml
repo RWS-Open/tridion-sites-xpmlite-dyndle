@@ -1,0 +1,26 @@
+﻿@using DyndleWebApp.Models.Entities
+@using DD4T.ContentModel
+@inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Entities.Offering>
+
+ 
+ 
+
+<div class="card border-0 rounded-0" @Html.EntityMarkup()>
+    <div class="card-hover">
+        @{
+            if (Model.body[0].Media != null)
+            {
+                <div>
+                    <img class="hover" src="@Model.body[0].Media.Url" alt="">
+                </div>
+            }
+        }
+        <h5 class="card-hover-title card-title text-uppercase m-0 py-3" @Html.DataFieldName(m => Model.Headline)>@Model.Headline</h5>
+        <div class="card-hover-block">
+            <p class="card-text text-center" @Html.DataFieldName(m => Model.introduction)>@Model.introduction</p>
+        </div>
+        <div class="card-hover-btn text-center">
+            <a href="@Model.Link.Url" class="btn btn-success rounded-0 text-white">@Model.Link.LinkText</a>
+        </div>
+    </div>
+</div>

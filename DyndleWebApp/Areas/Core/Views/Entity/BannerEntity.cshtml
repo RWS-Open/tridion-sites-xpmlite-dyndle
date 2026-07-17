@@ -1,0 +1,46 @@
+﻿@using DyndleWebApp.Models.Entities
+@using DD4T.ContentModel
+@using DyndleWebApp.App_Code
+@inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Entities.BannerEntity>
+
+
+
+
+@{
+    var mymodel = Model;
+ 
+
+}
+
+@if (Model.ItemListElements != null)
+{
+    for (int i = 0; i < Model.ItemListElements.Count; i++)
+    {
+        var item = Model.ItemListElements[i];
+
+        <section class="banner w-100 position-relative">
+            <div @Html.EntityMarkup()>
+                <!--  check add in the div Html.DxaEntityMarkup()-->
+                <div @Html.DataFieldName(m => item.Media, i)>
+                    <img src=@item.Media.Url alt="" class="img-fluid d-block w-100 banner-image-style" />
+                </div>
+                <!-- remaining items like gadget, banner center title -->
+                <div class="container-fluid position-absolute" style="bottom:50%;width:100%;left:50%;transform:translate(-50%, 50%);">
+                    <div class="row align-items-center justify-content-start">
+                        <div class="col-lg-5 ml-4 pl-4 text-center solar-banner mx-auto">
+                            <h1 class="h4 text-white banner-text text-uppercase position-relative animated fadeInUp" @Html.DataFieldName(m => item.subheading, i)>
+
+                                @item.subheading
+                            </h1>
+                            <a href="#lightbox" data-toggle="modal" class="btn btn-light mt-4 py-3 px-4 jmb-btn text-uppercase animated fadeInUp delay-1s">@item.Link.LinkText</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    }
+}
+ 
+
+

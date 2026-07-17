@@ -1,0 +1,27 @@
+﻿@using DyndleWebApp.Models.Entities
+@using DD4T.ContentModel
+@using DyndleWebApp.App_Code
+@inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Entities.Teaser>
+
+
+
+
+@{
+    var mymodel = Model;
+ 
+
+} 
+
+
+<div @Html.EntityMarkup()>
+    <a class="navbar-logo" title="@Model.Link.LinkText">
+        @if (Model != null)
+        {
+         //   var image = Model.Media as Image;
+            @* TODO: set span to display:inline-block for better experience in XPM? *@
+            <span @Html.DataFieldName(m => Model.Media)>
+                <img src="@Model.Media.Url" alt="@Model.Media.AltText">
+            </span>
+        }
+    </a>
+</div>

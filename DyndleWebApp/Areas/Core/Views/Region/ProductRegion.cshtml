@@ -1,0 +1,23 @@
+﻿@using Dyndle.Modules.Core.Models
+@using Dyndle.Modules.Core.Html
+@inherits System.Web.Mvc.WebViewPage<Dyndle.Modules.Core.Models.IRegionModel>
+
+
+@if (Model.Entities != null && Model.Entities.Any())
+{
+    <div @Html.RegionMarkup()>
+        <section id="our-offerings" class="mx-auto">
+            <div class="container-fluid">
+                <h6 class="text-center py-4 mb-3 mt-0 text-uppercase offerings-title position-relative">Offering</h6>
+                <div class="row">
+                    <div class="card-group w-100">
+                        @foreach (var entity in Model.Entities ?? new List<IEntityModel>())
+                        {
+                            @Html.RenderEntity(entity)
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+}

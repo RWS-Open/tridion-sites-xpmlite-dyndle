@@ -1,0 +1,103 @@
+﻿@using Dyndle.Modules.Core.Models
+@using Dyndle.Modules.Core.Html
+
+@model Dyndle.Modules.Core.Models.System.IncludePage
+@using System.Collections
+@using System.Configuration
+@using System.Collections.Specialized
+
+
+
+
+
+<header id="solar-panel-header" class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-solar mx-auto main-bar home">
+        <!-- LogoRegion -->
+        @{
+            var regionName = "LogoRegion";
+
+            var logoRegion = Model.Regions.FirstOrDefault(r => r.Name == regionName);
+            if (logoRegion != null)
+            {
+                @Html.RenderRegion(logoRegion, regionName)
+            }
+        }
+        <!-- Top navigation -->
+        <div class="collapse navbar-collapse collapse navbar-collapse justify-content-between" id="mainMenu" @Html.RegionMarkup()>
+            @{ Html.RenderNavigation("TopNavigation"); }
+        </div>
+
+       
+        <!--Top Right side Links -->
+        <div class="top-right-nav pl-4 top-bar">
+            <ul class="list-inline my-0 py-0">
+                <li class="list-inline-item mx-3">
+                    <a href="#" class="text-white">
+                        <img src="/content/img/solar-icon.png" class="solar-icon">
+                    </a>
+                </li>
+                <!--<li class="list-inline-item mx-3" data-toggle="modal" data-target="#language-selector">
+                <i class="material-icons md-16">language</i> <i class="material-icons md-16">arrow_drop_down</i>
+            </li>-->
+                <li class="list-inline-item mx-3">
+                    <div class="langdropdown languageSwitcher">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active text-white">
+                                <a href="#" class="text-white">
+                                    <span class="material-icons" style="font-size: 16px;top: 3px;position: relative;right: 2px;">language</span>
+                                    <i class="material-icons md-16">arrow_drop_down</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-inline-item mx-3 position-relative" data-toggle="modal" data-target="#graph-search">
+                    <i class="material-icons md-16">search</i>
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    var userInitial = User.IsInRole("Admin") ? "AD" : "VS";
+                    if (User.Identity.Name == "TomBrown") { userInitial = "TB"; }
+                    if (User.Identity.Name == "ManuelaEncanto") { userInitial = "ME"; }
+                    <li class="nav-item mx-2">
+                        <a class="nav-link js-scroll-trigger dropdown-toggle dropleft" href="#user" type="button" id="login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="rounded-circle border loggedIn text-white p-2" style="text-transform: uppercase;">@userInitial</span>
+                        </a>
+                        <div class="dropdown-menu p-2 logout-form" aria-labelledby="logout">
+                            <form method="post" action="/Account/LogOff?returnUrl=@HttpContext.Current.Request.Path">
+                                @*@Html.AntiForgeryToken()*@
+                                <div class="form-row w-100 m-0 border-bottom p-1">
+                                    <span class="col-12 text-info">@(User.Identity.Name)</span>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    <li class="list-inline-item mx-3">
+                        <a href="/Account/Login" class="text-white dropdown-toggle dropleft" type="button" id="login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @*<i class="material-icons md-16">account_box</i>*@
+                            <i class="material-icons md-16">account_circle</i>
+                        </a>
+                        <div class="dropdown-menu p-2 login-form" aria-labelledby="login" style="width: 500px;right: -12px !important;left: auto;">
+                            <form method="post" action="/Account/login?returnUrl=@HttpContext.Current.Request.Path">
+                                @*@Html.AntiForgeryToken()*@
+                                <div class="form-row w-100">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" id="UserName" placeholder="Username" name="UserName" />
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="Password" class="form-control" placeholder="Password" name="Password" />
+                                    </div>
+                                    <input class="col-2 btn btn-info" type="submit" value="Sign in" />
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <div id="langdropdown" class="position-fixed w-100"></div>
+</header>

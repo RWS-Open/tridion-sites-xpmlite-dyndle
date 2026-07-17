@@ -1,0 +1,25 @@
+﻿
+
+
+<ul class="nav navbar-nav main-nav mx-auto pr-5" @Html.EntityMarkup()>
+
+
+    @foreach (var item in Html.Navigation().Items)
+    {
+        <li>
+            <a class="nav-link" href="@item.Url">@item.Title <span class="sr-only">(current)</span></a>
+            @if (item.Items != null && item.Items.Any())
+            {
+                <ul>
+                    @foreach (var childItem in item.Items)
+                    {
+                        <li>
+                            <a href="@childItem.Url">@childItem.Title</a>
+                        </li>
+                    }
+                </ul>
+            }
+        </li>
+    }
+
+</ul>

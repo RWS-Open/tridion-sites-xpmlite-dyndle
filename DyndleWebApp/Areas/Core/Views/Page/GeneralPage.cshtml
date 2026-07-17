@@ -1,0 +1,40 @@
+﻿@using Dyndle.Modules.Core.Models
+@using Dyndle.Modules.Core.Html
+@inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Pages.GeneralPage>
+  
+
+@if (Model == null)
+{
+    <p>Page not found.</p>
+    return;
+}
+
+<div class="pageroot">
+
+    @if (Model.Regions != null && Model.Regions.Any())
+    {
+
+
+        <!-- Home Banner -->
+
+        var regionName = "BannerRegion";
+
+        var bannerRegion = Model.Regions.FirstOrDefault(r => r.Name == regionName);
+        if (bannerRegion != null)
+        {
+            @Html.RenderRegion(bannerRegion, regionName)
+        }
+
+
+
+        var ProductRegion = "ProductRegion";
+
+        var productRegion = Model.Regions.FirstOrDefault(r => r.Name == ProductRegion);
+        if (productRegion != null)
+        {
+            @Html.RenderRegion(productRegion, ProductRegion)
+        }
+
+
+    } 
+</div>

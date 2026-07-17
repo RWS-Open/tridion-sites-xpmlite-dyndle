@@ -1,0 +1,18 @@
+﻿@using Dyndle.Modules.Core.Models
+@using Dyndle.Modules.Core.Html
+@inherits System.Web.Mvc.WebViewPage<Dyndle.Modules.Core.Models.IRegionModel>
+
+@{
+    Layout = null;
+}
+
+<section class="region region-@Model.Name?.ToLower()" data-region="@Model.Name">
+
+    <h2 class="region-name">@Model.Name</h2>
+
+    @foreach (var entity in Model.Entities ?? new List<IEntityModel>())
+    {
+        @Html.RenderEntity(entity)
+    }
+
+</section>

@@ -1,0 +1,34 @@
+﻿@using DyndleWebApp.Models.Entities
+@using DD4T.ContentModel
+@using DyndleWebApp.App_Code
+@inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Entities.LinkList>
+
+
+
+
+@{
+    var mymodel = Model;
+
+
+}
+ 
+
+<ul class="list-inline text-md-center" @Html.EntityMarkup()>
+    @if (Model.Links != null && Model.Links.Count > 0)
+    {
+        <li class="list-inline-item border-right copyright">
+            <a href="#" class="pr-3">@Model.heading</a>
+        </li>
+
+        int index = 0;
+
+        foreach (var link in Model.Links)
+        {
+            <li class="list-inline-item" @Html.DataFieldName(m => link.LinkText, index)>
+                <a href="@link.Url" class="pr-3">@link.LinkText</a>
+            </li>
+            index++;
+        }
+    }
+
+</ul>
