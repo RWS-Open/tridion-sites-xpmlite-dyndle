@@ -475,7 +475,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\Core\Views\Region\BannerRegion.cshtml" />
-    <Content Include="Areas\Core\Views\Region\Region.cshtml" />
     <Content Include="Areas\Core\Views\Entity\ProductEntity.cshtml" />
     <Content Include="Areas\Core\Views\Region\ProductRegion.cshtml" />
     <Content Include="Areas\Core\Views\Page\HeaderPage.cshtml" />
