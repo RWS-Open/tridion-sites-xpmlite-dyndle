@@ -103,8 +103,8 @@
     <Reference Include="log4net, Version=3.3.1.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>packages\log4net.3.3.1\lib\net462\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.9\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.10\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -128,8 +128,8 @@
     <Reference Include="Microsoft.Extensions.DependencyInjection, Version=9.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.DependencyInjection.9.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.9, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.9\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.10, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.10\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Options, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Options.1.1.0\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
@@ -189,8 +189,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.10.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.10.0.10\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
@@ -438,12 +438,12 @@
     <Content Include="App_Code\PageTypeImagesConfigSection.cs" />
     <Content Include="App_Code\CapabilityHelper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Core\Controllers\OfferingCollectionController.cs" />
     <Compile Include="Areas\Core\Controllers\TeaserCollectionController.cs" />
     <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PageController.cs" />
-    <Compile Include="Controllers\TeaserCollectionController1.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -451,15 +451,15 @@
     <Compile Include="Infrastructure\AppLogger.cs" />
     <Compile Include="Infrastructure\BinaryProxyModule.cs" />
     <Compile Include="Infrastructure\ContentServiceBinaryProvider.cs" />
+    <Compile Include="Models\Entities\EmbeddedLink.cs" />
     <Compile Include="Models\Entities\Offering.cs" />
     <Compile Include="Models\Entities\BannerEntity.cs" />
     <Compile Include="Models\Entities\Link.cs" />
     <Compile Include="Models\Entities\Paragraph.cs" />
     <Compile Include="Models\Entities\LinkList.cs" />
     <Compile Include="Models\Entities\LinkedContent.cs" />
-    <Compile Include="Models\Entities\TeaserCollection.cs" />
+    <Compile Include="Models\Entities\OfferingCollection.cs" />
     <Compile Include="Models\Entities\Teaser.cs" />
-    <Compile Include="Models\Entities\TeaserCollectionViewModel.cs" />
     <Compile Include="Models\Pages\FooterPage.cs" />
     <Compile Include="Models\Pages\HeaderPage.cs" />
     <Compile Include="Models\Pages\GeneralPage.cs" />
@@ -507,8 +507,6 @@
     <Content Include="content\fonts\Roboto-Regular.ttf" />
     <Content Include="content\fonts\Roboto-Regular.woff" />
     <Content Include="content\fonts\Roboto-Regular.woff2" />
-    <Content Include="Areas\Core\Views\Entity\TeaserEntity.cshtml" />
-    <Content Include="Areas\Core\Views\TeaserCollection\TeaserCollection.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -522,6 +520,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Core\Views\OfferingCollection\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Page\" />
   </ItemGroup>

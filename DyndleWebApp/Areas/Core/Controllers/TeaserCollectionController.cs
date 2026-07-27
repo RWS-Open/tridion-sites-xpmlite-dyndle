@@ -31,6 +31,7 @@ namespace DyndleWebApp.Areas.Core.Controllers
             _viewModelFactory = viewModelFactory;
         }
 
+    /*
         [ChildActionOnly]
         public ActionResult TeaserCollection(ComponentPresentation componentPresentation)
         {
@@ -52,7 +53,7 @@ namespace DyndleWebApp.Areas.Core.Controllers
             if (cp == null)
                 return new EmptyResult();
 
-            var model = _viewModelFactory.BuildViewModel(cp) as TeaserCollection;
+            var model = _viewModelFactory.BuildViewModel(cp) as OfferingCollection;
 
             var viewModel = new TeaserCollectionViewModel();
 
@@ -74,5 +75,6 @@ namespace DyndleWebApp.Areas.Core.Controllers
 
             return View(viewModel);
         }
+  */
     }
 }
