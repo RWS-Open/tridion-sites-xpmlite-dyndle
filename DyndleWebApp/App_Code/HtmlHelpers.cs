@@ -58,5 +58,13 @@ namespace DyndleWebApp.App_Code
 
             return MvcHtmlString.Create($"data-component-id=\"{componentId}\"");
         }
+
+        public static MvcHtmlString EntityMarkup(this HtmlHelper html, Dyndle.Modules.Core.Models.EntityModel entity)
+        {
+            if (entity == null) return MvcHtmlString.Empty;
+            var componentId = entity.Id?.ToString();
+            if (string.IsNullOrEmpty(componentId)) return MvcHtmlString.Empty;
+            return MvcHtmlString.Create($"data-component-id=\"{componentId}\"");
+        }
     }
 }

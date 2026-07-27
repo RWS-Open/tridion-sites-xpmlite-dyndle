@@ -14,7 +14,7 @@
                  
                 foreach (var offering in Model.Offerings)
                 {
-    <div class="card border-0 rounded-0" @Html.EntityMarkup()>
+    <div class="card border-0 rounded-0" @Html.EntityMarkup(offering)>
         <div class="card-hover">
             @{
                 if (offering.Body[0].Media != null)

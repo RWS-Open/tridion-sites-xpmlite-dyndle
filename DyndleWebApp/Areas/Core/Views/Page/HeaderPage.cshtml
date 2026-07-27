@@ -19,7 +19,8 @@
             var logoRegion = Model.Regions.FirstOrDefault(r => r.Name == regionName);
             if (logoRegion != null)
             {
-                @Html.RenderRegion(logoRegion, regionName)
+                // @Html.RenderRegion(logoRegion, regionName)
+                @Html.RenderRegion(logoRegion)
             }
         }
         <!-- Top navigation -->
@@ -27,7 +28,7 @@
             @{ Html.RenderNavigation("TopNavigation"); }
         </div>
 
-       
+
         <!--Top Right side Links -->
         <div class="top-right-nav pl-4 top-bar">
             <ul class="list-inline my-0 py-0">

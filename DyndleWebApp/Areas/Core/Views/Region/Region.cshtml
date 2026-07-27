@@ -7,12 +7,8 @@
 }
 
 <section class="region region-@Model.Name?.ToLower()" data-region="@Model.Name">
-
-    <h2 class="region-name">@Model.Name</h2>
-
     @foreach (var entity in Model.Entities ?? new List<IEntityModel>())
     {
         @Html.RenderEntity(entity)
     }
-
 </section>

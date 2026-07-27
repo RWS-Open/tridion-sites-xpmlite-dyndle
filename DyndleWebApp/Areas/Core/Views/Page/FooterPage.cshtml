@@ -23,10 +23,10 @@
             @{
                 var regionName = "FooterLinksRegion";
 
-                var logoRegion = Model.Regions.FirstOrDefault(r => r.Name == regionName);
-                if (logoRegion != null)
+                var region = Model.Regions.FirstOrDefault(r => r.Name == regionName);
+                if (region != null)
                 {
-                    @Html.RenderRegion(logoRegion, regionName)
+                    @Html.RenderRegion(region)
                 }
             }
             <div class="col-md-4 p-0">
