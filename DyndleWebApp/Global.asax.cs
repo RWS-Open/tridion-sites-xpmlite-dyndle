@@ -29,26 +29,7 @@ namespace DyndleWebApp
  
 
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-
-            // Test token service connectivity
-            try
-            {
-                var url = System.Configuration.ConfigurationManager
-                              .AppSettings["token-service-uri"];
-                System.Diagnostics.Trace.TraceInformation($"Token service URI: {url}");
-
-                var request = System.Net.WebRequest.Create(url);
-                request.Timeout = 5000;
-                var response = request.GetResponse();
-                System.Diagnostics.Trace.TraceInformation("Token service reachable!");
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Trace.TraceInformation($"Token service UNREACHABLE: {ex.Message}");
-            }
-
-
+             
             var builder = new ContainerBuilder();
              
             foreach (var asm in Bootstrap.GetControllerAssemblies())

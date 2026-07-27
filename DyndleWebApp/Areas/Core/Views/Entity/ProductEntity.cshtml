@@ -11,9 +11,9 @@
 }
 
 @{
-
-    foreach (var offering in Model.Offerings)
-    {
+                 
+                foreach (var offering in Model.Offerings)
+                {
     <div class="card border-0 rounded-0" @Html.EntityMarkup()>
         <div class="card-hover">
             @{
@@ -23,7 +23,7 @@
                         <img class="hover" src="@offering.Body[0].Media.Url" alt="">
                     </div>
                 }
-            }
+    }
             <h5 class="card-hover-title card-title text-uppercase m-0 py-3" @Html.DataFieldName(m => offering.Headline)>@offering.Headline</h5>
             <div class="card-hover-block">
                 <p class="card-text text-center" @Html.DataFieldName(m => offering.Introduction)>@offering.Introduction</p>

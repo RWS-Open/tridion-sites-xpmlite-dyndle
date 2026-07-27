@@ -439,7 +439,6 @@
     <Content Include="App_Code\CapabilityHelper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Core\Controllers\OfferingCollectionController.cs" />
-    <Compile Include="Areas\Core\Controllers\TeaserCollectionController.cs" />
     <Compile Include="Areas\Core\CoreAreaRegistration.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
