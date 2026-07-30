@@ -326,3 +326,209 @@ System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpExcepti
 2026-07-27 19:26:44,018 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
 2026-07-27 19:26:44,033 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
 2026-07-27 19:26:44,033 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:13:28,572 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:13:28,572 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:13:40,631 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:13:40,631 [13] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:13:40,631 [13] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:13:40,631 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:13:40,850 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:13:40,850 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:13:40,854 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:13:40,854 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:13:40,940 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:13:40,940 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:13:42,157 [13] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:13:42,157 [13] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:13:42,185 [13] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:13:42,185 [13] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:31:27,964 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:31:27,964 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:31:40,979 [14] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:31:40,979 [14] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:31:41,080 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:31:41,080 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:31:41,114 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:31:41,114 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:31:41,117 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:31:41,117 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:33:11,458 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:33:11,458 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:33:22,888 [10] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:33:22,888 [10] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:33:22,953 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:33:22,953 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:33:22,953 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:33:22,953 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:33:23,167 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:33:23,167 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:38:41,232 [8] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:38:41,232 [8] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:38:55,811 [12] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:38:55,811 [12] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:38:55,827 [11] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:38:55,827 [11] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:38:55,908 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:38:55,908 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:38:55,910 [19] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:38:55,910 [19] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:45:53,788 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:45:53,788 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:46:07,091 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:46:07,091 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:46:07,182 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:46:07,182 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:46:07,279 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:46:07,279 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:46:07,285 [9] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:46:07,285 [9] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:46:13,929 [5] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:13,929 [5] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:14,065 [6] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:14,065 [6] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:14,107 [5] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/js/popper.min.js.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:14,109 [6] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/.well-known/appspecific/com.chrome.devtools.json
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:14,175 [7] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:14,175 [7] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:14,109 [6] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/.well-known/appspecific/com.chrome.devtools.json
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:14,107 [5] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/js/popper.min.js.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:14,354 [7] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/css/material-icons.min.css.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:14,354 [7] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/css/material-icons.min.css.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:18,613 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:46:18,613 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-30 11:46:20,498 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:46:20,498 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-30 11:46:20,570 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:46:20,570 [7] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-30 11:46:20,601 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:46:20,601 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-30 11:46:20,632 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:46:20,632 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-30 11:46:20,935 [11] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:20,935 [11] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:20,938 [11] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/.well-known/appspecific/com.chrome.devtools.json
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:20,938 [11] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/.well-known/appspecific/com.chrome.devtools.json
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:21,048 [15] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:21,048 [15] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:21,066 [5] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:21,066 [5] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:21,073 [15] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/js/popper.min.js.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:21,073 [15] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/js/popper.min.js.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:21,085 [5] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/css/material-icons.min.css.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:21,085 [5] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/content/css/material-icons.min.css.map
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:22,511 [8] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:22,511 [8] DEBUG Dyndle.Page - Rendering page: 
+2026-07-30 11:46:22,520 [8] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-30 11:46:22,520 [8] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)

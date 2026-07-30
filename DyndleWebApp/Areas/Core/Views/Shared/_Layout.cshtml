@@ -13,8 +13,8 @@
     <link href="~/content/css/styles.css" rel="stylesheet" media="screen">
 
     <!-- XPMLITE -->
-    <link rel="stylesheet" href="/content/xpmlite/css/dxa-inline-RzZ2T0UD.css">
-    <link rel="stylesheet" href="/content/xpmlite/css/dxa-xpmlite-BLyZ_BF3.css">
+    <link rel="stylesheet" href="/content/xpmlite/css/xpmlite-editor.bundle.css">
+    <link rel="stylesheet" href="/content/xpmlite/css/dxa-xpmlite.bundle.css">
     <!-- XPMLITE END -->
 
     <script src="/content/js/main.js"></script>
@@ -76,12 +76,12 @@
 
                 if (String(window.getConfig?.().staging).toLowerCase()==="true") {
                     const editorScript = document.createElement("script");
-                    editorScript.src = "/content/xpmlite/js/dxa-inline-BgHCj97B.js";
+                    editorScript.src = "/content/xpmlite/js/xpmlite-editor.bundle.js";
                     editorScript.defer = true;
                     document.head.appendChild(editorScript);
 
                     const dxaXpmliteScript = document.createElement("script");
-                    dxaXpmliteScript.src = "/content/xpmlite/js/dxa-xpmlite-DIf8uZ_x.js";
+                    dxaXpmliteScript.src = "/content/xpmlite/js/dxa-xpmlite.bundle.js";
                     editorScript.defer = true;
                     document.head.appendChild(dxaXpmliteScript);
                 }

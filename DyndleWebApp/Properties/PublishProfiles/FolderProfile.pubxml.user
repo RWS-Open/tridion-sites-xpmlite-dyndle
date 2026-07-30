@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\bin\XPMLite_Dyndle\</_PublishTargetUrl>
-    <History>True|2026-07-27T12:26:50.4765008Z||;True|2026-07-27T11:52:04.3645088+05:30||;</History>
+    <History>True|2026-07-30T05:50:56.9557459Z||;True|2026-07-27T17:56:50.4765008+05:30||;True|2026-07-27T11:52:04.3645088+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -28,7 +28,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/03/2026 12:24:23</publishTime>
     </File>
     <File Include="Areas/Core/Views/Entity/ProductEntity.cshtml">
-      <publishTime>07/27/2026 17:33:34</publishTime>
+      <publishTime>07/30/2026 11:32:05</publishTime>
     </File>
     <File Include="Areas/Core/Views/Errors/404.html">
       <publishTime>07/02/2026 19:21:49</publishTime>
@@ -37,13 +37,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/02/2026 16:18:03</publishTime>
     </File>
     <File Include="Areas/Core/Views/Page/FooterPage.cshtml">
-      <publishTime>07/27/2026 17:54:00</publishTime>
+      <publishTime>07/27/2026 19:09:56</publishTime>
     </File>
     <File Include="Areas/Core/Views/Page/GeneralPage.cshtml">
       <publishTime>07/27/2026 15:33:48</publishTime>
     </File>
     <File Include="Areas/Core/Views/Page/HeaderPage.cshtml">
-      <publishTime>07/27/2026 17:12:35</publishTime>
+      <publishTime>07/27/2026 19:08:23</publishTime>
     </File>
     <File Include="Areas/Core/Views/Page/PageNotFound.cshtml">
       <publishTime>07/02/2026 15:53:46</publishTime>
@@ -67,7 +67,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/02/2026 13:17:40</publishTime>
     </File>
     <File Include="Areas/Core/Views/Shared/_Layout.cshtml">
-      <publishTime>07/22/2026 16:02:30</publishTime>
+      <publishTime>07/30/2026 11:43:55</publishTime>
     </File>
     <File Include="Areas/Core/Views/Web.config">
       <publishTime>07/03/2026 12:24:23</publishTime>
@@ -178,10 +178,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/15/2025 19:16:06</publishTime>
     </File>
     <File Include="bin/DyndleWebApp.dll">
-      <publishTime>07/27/2026 11:51:47</publishTime>
+      <publishTime>07/30/2026 11:20:37</publishTime>
     </File>
     <File Include="bin/DyndleWebApp.pdb">
-      <publishTime>07/27/2026 11:51:47</publishTime>
+      <publishTime>07/30/2026 11:20:37</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
       <publishTime>08/14/2018 04:52:12</publishTime>
@@ -741,6 +741,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="content/xpmlite/css/dxa-xpmlite-BLyZ_BF3.css">
       <publishTime>07/22/2026 10:41:57</publishTime>
     </File>
+    <File Include="content/xpmlite/css/dxa-xpmlite.bundle.css">
+      <publishTime>07/30/2026 11:34:48</publishTime>
+    </File>
+    <File Include="content/xpmlite/css/xpmlite-editor.bundle.css">
+      <publishTime>07/30/2026 11:34:56</publishTime>
+    </File>
     <File Include="content/xpmlite/img/Accordian.jpg">
       <publishTime>03/18/2024 20:10:42</publishTime>
     </File>
@@ -788,6 +794,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="content/xpmlite/js/dxa-xpmlite-DIf8uZ_x.js">
       <publishTime>07/22/2026 12:42:22</publishTime>
+    </File>
+    <File Include="content/xpmlite/js/dxa-xpmlite.bundle.js">
+      <publishTime>07/30/2026 11:34:56</publishTime>
+    </File>
+    <File Include="content/xpmlite/js/xpmlite-editor.bundle.js">
+      <publishTime>07/30/2026 11:34:58</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>07/03/2026 12:24:24</publishTime>

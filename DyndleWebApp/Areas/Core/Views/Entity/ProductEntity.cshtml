@@ -2,36 +2,34 @@
 @using DD4T.ContentModel
 @inherits System.Web.Mvc.WebViewPage<DyndleWebApp.Models.Entities.OfferingCollection>
 
-
-
-
 @{
     var model = Model;
-
 }
 
 @{
-                 
-                foreach (var offering in Model.Offerings)
-                {
-    <div class="card border-0 rounded-0" @Html.EntityMarkup(offering)>
-        <div class="card-hover">
-            @{
-                if (offering.Body[0].Media != null)
-                {
-                    <div>
-                        <img class="hover" src="@offering.Body[0].Media.Url" alt="">
+    foreach (var offering in Model.Offerings)
+    {
+        foreach (var body in offering.Body)
+        {
+            <div class="card border-0 rounded-0" @Html.EntityMarkup(offering)>
+                <div class="card-hover">
+                    @{
+                        if (body.Media != null)
+                        {
+                            <div>
+                                <img class="hover" src="@body.Media.Url" alt="">
+                            </div>
+                        }
+                    }
+                    <h5 class="card-hover-title card-title text-uppercase m-0 py-3" @Html.DataFieldName(m => body.Subheading)>@body.Subheading</h5>
+                    <div class="card-hover-block">
+                        <p class="card-text text-center" @Html.DataFieldName(m => offering.Introduction)>@offering.Introduction</p>
                     </div>
-                }
-    }
-            <h5 class="card-hover-title card-title text-uppercase m-0 py-3" @Html.DataFieldName(m => offering.Headline)>@offering.Headline</h5>
-            <div class="card-hover-block">
-                <p class="card-text text-center" @Html.DataFieldName(m => offering.Introduction)>@offering.Introduction</p>
+                    <div class="card-hover-btn text-center">
+                        <a href="@offering.Link.Url" class="btn btn-success rounded-0 text-white">@offering.Link.LinkText</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-hover-btn text-center">
-                <a href="@offering.Link.Url" class="btn btn-success rounded-0 text-white">@offering.Link.LinkText</a>
-            </div>
-        </div>
-    </div>
+        }
     }
 }
