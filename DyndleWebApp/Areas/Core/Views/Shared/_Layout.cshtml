@@ -47,10 +47,6 @@
             }
             var serializedItems = Newtonsoft.Json.JsonConvert.SerializeObject(PageTypeImages);
 
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.7.0/tinymce.min.js" referrerpolicy="origin"></script>
-
-
             <script type="text/javascript">
 
                 function getPageTypeImages() {
@@ -67,11 +63,10 @@
 		                    authorization_baseurl : '@System.Configuration.ConfigurationManager.AppSettings["authorization_baseurl"]',
                             contentServiceUrl: '@System.Configuration.ConfigurationManager.AppSettings["contentServiceUrl"]',
                             experience_space_url:'@System.Configuration.ConfigurationManager.AppSettings["experience_space_url"]',
-
+							default_binary_folderId:'@System.Configuration.ConfigurationManager.AppSettings["default_binary_folderId"]'
 	                    }
 	                    return config;
                 }
-
 
 
                 if (String(window.getConfig?.().staging).toLowerCase()==="true") {

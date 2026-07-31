@@ -532,3 +532,41 @@ System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpExcepti
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
    at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-31 19:17:06,108 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-31 19:17:06,108 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-31 19:17:25,703 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-31 19:17:25,703 [8] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-31 19:17:25,831 [12] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-31 19:17:25,831 [12] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-31 19:17:25,890 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-31 19:17:25,890 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-31 19:17:26,150 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-31 19:17:26,150 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-31 19:17:30,227 [6] DEBUG Dyndle.Page - Rendering page: 
+2026-07-31 19:17:30,227 [6] DEBUG Dyndle.Page - Rendering page: 
+2026-07-31 19:17:30,265 [6] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-31 19:17:30,265 [6] ERROR Dyndle.Page - Unhandled exception for: https://localhost:44333/favicon.ico
+System.Web.HttpException (0x80004005): Exception of type 'System.Web.HttpException' was thrown.
+   at Dyndle.Modules.Core.Controllers.Base.ModuleControllerBase.HttpStatusCodeResult.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+2026-07-31 19:19:18,691 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-31 19:19:18,691 [5] DEBUG Dyndle.Page - Rendering page: tcm:7-10676-64
+2026-07-31 19:19:33,098 [9] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-31 19:19:33,098 [9] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\logo_transparent-white-40_tcm7-515.png
+2026-07-31 19:19:33,189 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-31 19:19:33,189 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\banner-1903x1270_tcm7-569.jpg
+2026-07-31 19:19:33,234 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-31 19:19:33,234 [6] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\shutterstock_585345260_1903x970_tcm7-626_tcm7-10681.jpg
+2026-07-31 19:19:34,189 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
+2026-07-31 19:19:34,189 [5] DEBUG Dyndle.Binary - Serving from disk cache: C:\SDL_Dev\RWS_open\tridion-sites-xpmlite-dyndle\DyndleWebApp\BinaryData\media\cII_tcm7-10683.jpg
