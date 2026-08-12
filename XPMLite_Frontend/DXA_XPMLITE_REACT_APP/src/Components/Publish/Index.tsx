@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Alert, Button, ConfigProvider, Modal } from 'antd';
 
-import { useAppDispatch, useAppSelector } from '../../store/connect';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import PublishContainer from './PublishContainer';
-import { setErrorMessage, setSelectedChildPublications, setSelectedPublishingTarget } from '../../store/publish/publishSlice';
+import { setErrorMessage, setSelectedChildPublications, setSelectedPublishingTarget } from '../../store/slices/publishSlice';
 
 const themeStyle = {
     Tabs: {

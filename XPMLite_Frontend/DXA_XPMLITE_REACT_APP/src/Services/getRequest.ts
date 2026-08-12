@@ -11,21 +11,13 @@ const getService = {
     },
 
     getOrganizationalStructure: async (orgContentFolderId: string): Promise<AxiosResponse> => { 
-       const url = `/items/${orgContentFolderId}/organizationalStructureTree?includeAllPublications=false&includeChildrenOnEveryLevel=true&groupCategoriesAndKeywords=false&groupBusinessProcessTypes=false&useDynamicVersion=true`
-       //const url =  `/items/${orgContentFolderId}/items?useDynamicVersion=true&recursive=false&details=Contentless`
-       return await axiosClient.get(url)
+       const url = `/items/${orgContentFolderId}/organizationalStructureTree?includeAllPublications=false&includeChildrenOnEveryLevel=true&groupCategoriesAndKeywords=false&groupBusinessProcessTypes=false&useDynamicVersion=true`;
+       return await axiosClient.get(url);
     },
 
     getComponentTemplates: async (schemaId: string): Promise<AxiosResponse> => { 
-        return await axiosClient.get(`/items/${schemaId}/componentTemplateLinks`)
+        return await axiosClient.get(`/items/${schemaId}/componentTemplateLinks`);
     },
-
-   /*  getPublicationTarget: async () => {
-        const siteurl = "https://dxa.tridiondemo.com" //window.location.origin
-        const url = `/system/publishSourceByUrl?url=${siteurl}`;
-        const response = await axiosClient.get(url)
-        return response.data.TargetType.IdRef;
-    }, */
 
     getPageContainerData: async (containerId: string): Promise<AxiosResponse> => { 
         return axiosClient.get(`/item/defaultModel/Page?containerId=${containerId}`);

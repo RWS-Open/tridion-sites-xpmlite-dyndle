@@ -1,7 +1,7 @@
 import formatTcmId from "../utils/formatTcmId";
 import getItems from "./getRequest";
 import postServices from "./postRequest";
-import putServices from "./putRquest";
+import putServices from "./putRequest";
 // Component Page
 export const checkout = async <P>(tcmid: P) => {
     const checkoutResponse = await postServices.checkout(`${tcmid}/checkOut`);

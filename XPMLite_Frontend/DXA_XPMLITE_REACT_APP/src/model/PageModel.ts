@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Dayjs } from "dayjs";
 export interface SelectedKeys {
     title: string | null,
@@ -36,11 +35,11 @@ export interface SelectedComponentTemplate {
 }
 
 export interface DataNode {
-    title: string | ReactNode;
+    title: string;
     type?: string;
-    id: string,
-    key: React.Key;
-    icon: ReactNode,
+    id: string;
+    key: string | number;
+    iconType?: 'component' | 'region' | 'page';
     isLeaf?: boolean;
     children?: DataNode[];
 }

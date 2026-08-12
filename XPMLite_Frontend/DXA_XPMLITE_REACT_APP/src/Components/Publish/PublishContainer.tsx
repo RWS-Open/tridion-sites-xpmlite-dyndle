@@ -4,9 +4,8 @@ import type { TabsProps } from "antd";
 import dayjs, { Dayjs } from "dayjs";
 
 import { IPublishData } from "../../model/PageModel";
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setLoading, setPublishDate } from "../../store/publish/publishSlice";
-import { setErrorMessage } from "../../store/publish/publishSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setErrorMessage, setLoading, setPublishDate } from "../../store/slices/publishSlice";
 
 import AdditionalSettings from "./AdditionalSettings";
 import General from "./General";

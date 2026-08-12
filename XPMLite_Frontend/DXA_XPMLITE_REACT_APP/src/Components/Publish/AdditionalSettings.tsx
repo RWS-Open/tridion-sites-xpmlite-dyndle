@@ -1,7 +1,7 @@
 import { Radio, RadioChangeEvent, Select } from "antd";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setAdditionalSettings, setPublishPriority } from "../../store/publish/publishSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setAdditionalSettings, setPublishPriority } from "../../store/slices/publishSlice";
 
 interface AdditionalSettings{
     [linkedItems:string]:number

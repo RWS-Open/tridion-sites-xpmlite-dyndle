@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { Alert, Button, ConfigProvider, Flex, Steps, theme } from 'antd';
 
-import { useAppDispatch, useAppSelector } from '../../store/connect';
-import { togglePageBuilder } from '../../store/page/pageSlice';
-import { setErrorMessage, setLoading, setPageTypeList } from '../../store/pageBuilder/pageBuilderSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { togglePageBuilder } from '../../store/slices/pageSlice';
+import { setErrorMessage, setLoading, setPageTypeList } from '../../store/slices/pageBuilderSlice';
 
-import {setErrorMessage as setPublishErrorMessage} from "../../store/publish/publishSlice"
+import {setErrorMessage as setPublishErrorMessage} from "../../store/slices/publishSlice"
 
 import postService from '../../Services/postRequest';
 import getService from '../../Services/getRequest';

@@ -1,7 +1,7 @@
 import { Card, Image, List } from "antd";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setPageTypeId, setSelectedPageType } from "../../store/pageBuilder/pageBuilderSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setPageTypeId, setSelectedPageType } from "../../store/slices/pageBuilderSlice";
 import { LoadingOutlined } from "@ant-design/icons";
 
 interface PageTypeItem {

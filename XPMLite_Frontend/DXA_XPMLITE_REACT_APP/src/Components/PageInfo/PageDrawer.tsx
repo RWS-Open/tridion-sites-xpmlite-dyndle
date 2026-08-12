@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import { Drawer } from "antd";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { togglePageInfo } from "../../store/page/pageSlice";
-import { fetchPageInfoData } from "../../store/pageInfo/pageinfoActions";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { togglePageInfo } from "../../store/slices/pageSlice";
+import { fetchPageInfoData } from "../../store/slices/pageInfoSlice";
 import PageTreeview from "./PageTreeview";
 
 const PageDrawer = () => {

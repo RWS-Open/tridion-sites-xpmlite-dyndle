@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { ConfigProvider, Flex } from "antd";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { fetchTargetTypes } from "../../store/publish/publishAction";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { fetchTargetTypes } from "../../store/slices/publishSlice";
 
 import PublicationList from "./PublicationList";
 import PublicationTargetTypes from "./PublicationTargetTypes";

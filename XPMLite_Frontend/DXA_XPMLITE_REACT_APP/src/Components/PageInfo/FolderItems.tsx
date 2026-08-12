@@ -6,9 +6,8 @@ import { Icon, Icons } from '../../resources/icons';
 import { format } from 'date-fns';
 import { ShowElipsis } from '../ShowElipsis';
 import { LoadingOutlined } from '@ant-design/icons';
-import { useAppDispatch, useAppSelector } from '../../store/connect';
-import { setSelectedComponentRowKeys, setSelectedComponentTemplate } from '../../store/pageInfo/pageInfoSlice';
-import { fetchComponentTemplatesData } from '../../store/pageInfo/pageinfoActions';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { fetchComponentTemplatesData, setSelectedComponentRowKeys, setSelectedComponentTemplate } from '../../store/slices/pageInfoSlice';
 import { DataNode } from '../../model/PageModel';
 
 import formatTcmId from '../../utils/formatTcmId';
@@ -79,18 +78,18 @@ const FolderItems = ({ selectedItemId }: FolderItemsProps) => {
             const response = await getService.getFolderItems(itemId);
             if (response?.data) {
                 const filteredData = response.data.filter((item: any) =>
-                    item.hasOwnProperty("Data")
+                    Object.prototype.hasOwnProperty.call(item, "Data")
                         ? (item.Data.$type === "Folder" || item.Data.$type === "Component")
                         : (item.$type === "Folder" || item.$type === "Component")
                 )
 
                 const filteredOrgData = filteredData?.map((items: any) => {
-                    const type = items.hasOwnProperty("Data") ? items.Data.$type : items.$type;
-                    const title = items.hasOwnProperty("Data") ? items.Data.Title : items.Title;
-                    const status = items.hasOwnProperty("IsPublishedInContext") ? items.IsPublishedInContext : "";
-                    const schema = items.hasOwnProperty("Schema") ? items.Schema.Title : "";
-                    const date = items.hasOwnProperty("Data") ? items.Data.VersionInfo.RevisionDate : items.VersionInfo.RevisionDate;
-                    const schemaId = items.hasOwnProperty("Schema") ? items.Schema.IdRef : "";
+                    const type = Object.prototype.hasOwnProperty.call(items, "Data") ? items.Data.$type : items.$type;
+                    const title = Object.prototype.hasOwnProperty.call(items, "Data") ? items.Data.Title : items.Title;
+                    const status = Object.prototype.hasOwnProperty.call(items, "IsPublishedInContext") ? items.IsPublishedInContext : "";
+                    const schema = Object.prototype.hasOwnProperty.call(items, "Schema") ? items.Schema.Title : "";
+                    const date = Object.prototype.hasOwnProperty.call(items, "Data") ? items.Data.VersionInfo.RevisionDate : items.VersionInfo.RevisionDate;
+                    const schemaId = Object.prototype.hasOwnProperty.call(items, "Schema") ? items.Schema.IdRef : "";
                     return {
                         key: items.Id,
                         id: items.Id,

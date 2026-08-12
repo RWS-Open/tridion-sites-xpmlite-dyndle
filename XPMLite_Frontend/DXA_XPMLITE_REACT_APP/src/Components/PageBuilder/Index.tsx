@@ -1,10 +1,9 @@
 import { useCallback, useEffect } from 'react';
 import { Modal } from 'antd';
 
-import { useAppDispatch, useAppSelector } from '../../store/connect';
-import { togglePageBuilder } from '../../store/page/pageSlice';
-import { setStructureIds } from '../../store/pageBuilder/pageBuilderSlice';
-import { fetchPageTypes } from '../../store/pageBuilder/pageBuilderActions';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { togglePageBuilder } from '../../store/slices/pageSlice';
+import { fetchPageTypes, setStructureIds } from '../../store/slices/pageBuilderSlice';
 
 import getService from '../../Services/getRequest';
 import formatTcmId from '../../utils/formatTcmId';
