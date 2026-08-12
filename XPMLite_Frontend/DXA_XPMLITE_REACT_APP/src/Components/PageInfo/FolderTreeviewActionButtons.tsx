@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button, List, Popover, Flex } from "antd";
 
 import { Icon, Icons } from "../../resources/icons";
-import { useAppSelector } from '../../store/connect';
+import { useAppSelector } from '../../store/hooks';
 
 import getService from "../../Services/getRequest";
 import formatTcmId from '../../utils/formatTcmId';
@@ -18,7 +18,7 @@ const FolderTreeviewActionButtons = ({ updatePageData, handleCancel }: ActionBut
     const [isItemAllowed, setAllowedItem] = useState<boolean>(true);
 
     useEffect(() => {
-        if (!selectedKeys || selectedComponentRowKeys.length === 0) {
+        if (!selectedKeys || !selectedComponentRowKeys || selectedComponentRowKeys.length === 0) {
             setAllowedItem(true);
             return;
         }
@@ -129,7 +129,7 @@ const FolderTreeviewActionButtons = ({ updatePageData, handleCancel }: ActionBut
                         <p className="mb-0 fw-bold">Allowed schemas and templates:</p>
                         {selectedKeys?.constraints?.typeConstraint?.map((item: any, index: number) => {
                             const itemKey = item.BasedOnSchema?.IdRef || item.BasedOnComponentTemplate?.IdRef || index;
-                            if (item.hasOwnProperty("BasedOnSchema") && item.hasOwnProperty("BasedOnComponentTemplate")) {
+                            if (Object.prototype.hasOwnProperty.call(item, "BasedOnSchema") && Object.prototype.hasOwnProperty.call(item, "BasedOnComponentTemplate")) {
                                 return (
                                     <Flex align="center" gap="small" className="mb-1" key={itemKey}>
                                         <p className="mb-0">{Icons["Schema" as keyof Icon]} </p>
@@ -141,14 +141,14 @@ const FolderTreeviewActionButtons = ({ updatePageData, handleCancel }: ActionBut
                                         </Flex>
                                     </Flex>
                                 );
-                            } else if (item.hasOwnProperty("BasedOnComponentTemplate")) {
+                            } else if (Object.prototype.hasOwnProperty.call(item, "BasedOnComponentTemplate")) {
                                 return (
                                     <Flex align="center" gap="small" className="mb-1" key={itemKey}>
                                         <p className="mb-0">{Icons["Component Template" as keyof Icon]} </p>
                                         <p className="mb-0">{item.BasedOnComponentTemplate.Title}</p>
                                     </Flex>
                                 );
-                            } else if (item.hasOwnProperty("BasedOnSchema")) {
+                            } else if (Object.prototype.hasOwnProperty.call(item, "BasedOnSchema")) {
                                 return (
                                     <Flex align="center" gap="small" className="mb-1" key={itemKey}>
                                         <p className="mb-0">{Icons["Component Template" as keyof Icon]} </p>

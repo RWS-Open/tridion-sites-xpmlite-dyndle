@@ -3,8 +3,8 @@ import { Button, Flex } from 'antd';
 import { LinkOutlined } from '@ant-design/icons';
 import Cookies from 'js-cookie';
 
-import { useAppDispatch, useAppSelector } from '../store/connect';
-import { togglePageBuilder, togglePageInfo } from '../store/page/pageSlice';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { togglePageBuilder, togglePageInfo } from '../store/slices/pageSlice';
 import Publish from './Publish/Index';
 import OAuth from './OAuth';
 

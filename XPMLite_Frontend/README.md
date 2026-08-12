@@ -1,6 +1,6 @@
-# DXA XPM Lite Setup Guide
+# Dyndle XPM Lite Setup Guide
 
-DXA XPM Lite provides simplified, lightweight inline editing, component presentation management, and page creation capabilities directly within a Tridion Sites-driven DXA website.
+XPM Lite provides simplified, lightweight inline editing, component presentation management, and page creation capabilities directly within a Tridion Sites-driven Dyndle website.
 
 ## 1. Installation & Deployment
 
@@ -13,22 +13,22 @@ If you are deploying stable versions, you can download the compiled assets direc
 
 - Download the Latest Release Assets
   
-  - Navigate to the project's releases page and download the latest asset archive (dxa-xpmlite-assets.zip or the individual production .js and .css bundles).
+  - Navigate to the project's releases page and download the latest asset archive (xpmlite-assets.zip or the individual production .js and .css bundles).
 
-- Extract and Copy Assets to DXA Website
+- Extract and Copy Assets to Dyndle Website
   
-  - Extract the archive and copy the compiled files directly into your DXA website's assets directory (e.g., /content/js/ and /content/css/).
+  - Extract the archive and copy the compiled files directly into your Dyndle website's assets directory (e.g., /content/js/ and /content/css/).
   
 - Update Layout References
   
-  - Open the main layout page of your DXA website and update the paths to point to the newly copied asset locations.
+  - Open the main layout page of your Dyndle website and update the paths to point to the newly copied asset locations.
   
   - [Follow these steps to update the layout file](#copy-assets-step)
 
 
 ### Option B: Build from Source
 
-Follow these steps to build the frontend assets and deploy them to your DXA website.
+Follow these steps to build the frontend assets and deploy them to your Dyndle website.
 
 #### 1. Build the Inline Edit Module
 
@@ -67,14 +67,14 @@ Follow these steps to build the frontend assets and deploy them to your DXA webs
 
 - The compiled distribution files will be generated in the dist directory.
 
-#### 3. Copy Assets to DXA Webapp
-<Step subtitle="File System" title="Copy Assets to DXA Webapp">
-  <span id="copy-assets-step"></span>Copy the generated build files (`.js` and `.css`) from the `dist` folders of both applications into your DXA website's assets directory.
+#### 3. Copy Assets to Dyndle Webapp
+<Step subtitle="File System" title="Copy Assets to Dyndle Webapp">
+  <span id="copy-assets-step"></span>Copy the generated build files (`.js` and `.css`) from the `dist` folders of both applications into your Dyndle website's assets directory.
 </Step>
 
 #### 4. Update Layout References
 
-- Open the main layout page of your DXA website and update the file paths to reference the newly copied JS and CSS assets.
+- Open the main layout page of your Dyndle website and update the file paths to reference the newly copied JS and CSS assets.
 
 ```html
     @model PageModel
@@ -186,9 +186,9 @@ Follow these steps to build the frontend assets and deploy them to your DXA webs
 
 ## 3. Configuration
 
-### DXA Website Configuration (Web.config)
+### Dyndle Website Configuration (Web.config)
 
-- Update the <appSettings> and custom configuration sections in your DXA website's root Web.config file (<%WEBSITE_ROOT%>\Web.config).
+- Update the <appSettings> and custom configuration sections in your Dyndle website's root Web.config file (<%WEBSITE_ROOT%>\Web.config).
   
     ```xml
         <configuration>
@@ -256,7 +256,7 @@ Follow these steps to build the frontend assets and deploy them to your DXA webs
 
 ### Enable Open API Cross-Origin Resource Sharing (CORS)
   
-- To allow the website to communicate with the Tridion Sites Open API across domains, explicitly add your DXA website's origin to the Open API service's Web.config 
+- To allow the website to communicate with the Tridion Sites Open API across domains, explicitly add your Dyndle website's origin to the Open API service's Web.config 
   (<%TRIDION_HOME%>\openapi\service\Web.config):
   
 ```xml
@@ -273,7 +273,7 @@ Follow these steps to build the frontend assets and deploy them to your DXA webs
 
 ### Accessing the Tool
 
-  - Navigate to your DXA website in a web browser.
+  - Navigate to your Dyndle website in a web browser.
   
   - An absolute-positioned tool bar will render at the bottom of the viewport.
   

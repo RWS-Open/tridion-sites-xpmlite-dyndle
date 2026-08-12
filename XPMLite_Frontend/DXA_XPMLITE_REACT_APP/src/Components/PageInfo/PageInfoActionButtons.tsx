@@ -1,13 +1,13 @@
 import { Button } from "antd";
 import { DeleteOutlined, PlusOutlined, SaveOutlined } from "@ant-design/icons";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setLoading, setModalTreeView } from '../../store/pageInfo/pageInfoSlice';
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setLoading, setModalTreeView } from '../../store/slices/pageInfoSlice';
 
 import Publish from "../Publish/Index"
 import formatTcmId from "../../utils/formatTcmId";
 import postService from "../../Services/postRequest";
-import putService from '../../Services/putRquest';
+import putService from '../../Services/putRequest';
 
 interface PageInfoActionButtonsProps {
     deletePageComponent: () => void;
@@ -25,8 +25,8 @@ const PageInfoActionButtons = ({ deletePageComponent }: PageInfoActionButtonsPro
             const data = structuredClone(pageInfoData);
             if (!data) return;
 
-            let pageId = formatTcmId(data.Id)
-            let splitId = pageId.split("-");
+            const pageId = formatTcmId(data.Id);
+            const splitId = pageId.split("-");
             let id = "";
             if (data.LockInfo.LockType.includes("CheckedOut")) {
                 splitId.splice(-1);
@@ -63,10 +63,10 @@ const PageInfoActionButtons = ({ deletePageComponent }: PageInfoActionButtonsPro
         }
     };
 
-    const isPlusDisabled = selectedKeys.key === null ||
-        selectedKeys.constraints?.numberItemsExist === selectedKeys.constraints?.maxOccurance;
+    const isPlusDisabled = !selectedKeys?.key ||
+        selectedKeys?.constraints?.numberItemsExist === selectedKeys?.constraints?.maxOccurance;
 
-    const isDeleteDisabled = selectedKeys.key === null || selectedKeys.type !== "ComponentPresentation";
+    const isDeleteDisabled = !selectedKeys?.key || selectedKeys?.type !== "ComponentPresentation";
 
     return (
         <>

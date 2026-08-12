@@ -1,4 +1,4 @@
-# DXA XPM Lite React App Setup and Usage Guide
+# XPM Lite React App Setup and Usage Guide for Dyndle Website
 
 ## Prerequisites
 

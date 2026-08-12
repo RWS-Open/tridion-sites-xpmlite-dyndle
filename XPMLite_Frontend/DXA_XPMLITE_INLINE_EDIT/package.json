@@ -1,7 +1,7 @@
 {
   "name": "dxa-inline-edit",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "./dist/xpmlite-editor.bundle.js",
   "style": "./dist/xpmlite-editor.bundle.css",

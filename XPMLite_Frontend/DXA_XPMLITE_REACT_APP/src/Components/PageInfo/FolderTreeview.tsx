@@ -4,8 +4,8 @@ import { DownOutlined, LoadingOutlined } from "@ant-design/icons";
 
 import { Icon, Icons } from "../../resources/icons";
 import { ShowElipsis } from "../ShowElipsis";
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setModalTreeView } from "../../store/pageInfo/pageInfoSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setModalTreeView } from "../../store/slices/pageInfoSlice";
 import { DataNode } from "../../model/PageModel";
 
 import getService from "../../Services/getRequest";
@@ -42,20 +42,20 @@ const FolderTreeview = ({updatePageData}:FolderProps) => {
     const traverse = (data:any):any => {
         if (Array.isArray(data) && data.length !== 0) {
             return data.filter((items: any) => {
-                if (items.hasOwnProperty("DataType")) {
+                if (Object.prototype.hasOwnProperty.call(items, "DataType")) {
                     if (items["DataType"] !== "Schema" && items["DataType"] !== "Component" && items["DataType"] !== "BusinessProcessType" && items["DataType"] !== "Category" && items["DataType"] !== "StructureGroup" && items["DataType"] !== "ExternalCategory") {
                         return true
                     }
-                } else if (items.hasOwnProperty("$type")) {
+                } else if (Object.prototype.hasOwnProperty.call(items, "$type")) {
                     if (items["DataType"] !== "Schema" && items["DataType"] !== "Component" && items["DataType"] !== "BusinessProcessType" && items["DataType"] !== "Category" && items["DataType"] !== "StructureGroup" && items["DataType"] !== "ExternalCategory") {
                         return true
                     }
                 }
                 return false
             }).map((item: any) => {
-                if (item.hasOwnProperty("IdRef")) {
-                    let icon = item["DataType"] !== undefined ? item["DataType"] : item["DisplayName"]
-                    let title = item["DisplayName"] === "Content Management" ? "Publication" : item["DisplayName"]
+                if (Object.prototype.hasOwnProperty.call(item, "IdRef")) {
+                    const icon = item["DataType"] !== undefined ? item["DataType"] : item["DisplayName"]
+                    const title = item["DisplayName"] === "Content Management" ? "Publication" : item["DisplayName"]
                     return {
                         title: <ShowElipsis title={title} />,
                         id: item["IdRef"],
@@ -66,7 +66,7 @@ const FolderTreeview = ({updatePageData}:FolderProps) => {
                         children: Array.isArray(item.Children) ? traverse(item.Children) : []
                     }
                 } else {
-                    let icon = item["$type"]
+                    const icon = item["$type"]
                     return {
                         title:<ShowElipsis title={item["Title"] as string} />,
                         id: item["Id"],
@@ -80,7 +80,7 @@ const FolderTreeview = ({updatePageData}:FolderProps) => {
             });
         }
     }
-    const onSelect: TreeProps['onSelect'] = ([], info) => {
+    const onSelect: TreeProps['onSelect'] = (_selectedKeys, info) => {
        // console.log(selectedKeys)
         const selectedTcmId = info.node.key?.toString();
         const tcmid = formatTcmId(selectedTcmId);

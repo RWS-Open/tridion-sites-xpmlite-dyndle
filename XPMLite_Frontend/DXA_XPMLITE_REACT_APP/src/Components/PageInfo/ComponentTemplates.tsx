@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Flex, Select } from "antd";
 
-import { useAppDispatch, useAppSelector } from '../../store/connect';
-import { setSelectedComponentTemplate, setUpdatedComponentTemplate } from '../../store/pageInfo/pageInfoSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { setSelectedComponentTemplate, setUpdatedComponentTemplate } from '../../store/slices/pageInfoSlice';
 import { IComponentTemplate } from '../../model/PageModel';
 
 const ComponentTemplates = () => {

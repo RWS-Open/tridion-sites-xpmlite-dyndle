@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Input, Select } from 'antd'
 import { StarFilled } from '@ant-design/icons'
 
-import { useAppDispatch, useAppSelector } from '../../store/connect';
-import { setFormData, setSelectedPageSchema, setSelectedPageTemplate, setSelectedPageType } from '../../store/pageBuilder/pageBuilderSlice';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { setFormData, setSelectedPageSchema, setSelectedPageTemplate, setSelectedPageType } from '../../store/slices/pageBuilderSlice';
 import formatTcmId from '../../utils/formatTcmId';
 
 interface PageTemplates {

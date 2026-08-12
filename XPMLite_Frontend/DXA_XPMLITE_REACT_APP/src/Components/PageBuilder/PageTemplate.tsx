@@ -3,7 +3,7 @@ import { Col, Row, Tree } from 'antd';
 import { DataNode } from 'antd/es/tree';
 
 import { Icon, Icons } from '../../resources/icons';
-import { useAppSelector } from '../../store/connect';
+import { useAppSelector } from '../../store/hooks';
 
 export interface TridionItemPayload {
     $type?: string;

@@ -1,7 +1,7 @@
 import { Checkbox, Flex, RadioChangeEvent, Table, TableProps } from "antd";
 
-import { setCurrentPublicationToPublishing, setSelectedChildPublications } from "../../store/publish/publishSlice";
-import { useAppDispatch, useAppSelector } from "../../store/connect";
+import { setCurrentPublicationToPublishing, setSelectedChildPublications } from "../../store/slices/publishSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 interface DataType {
     name: string,

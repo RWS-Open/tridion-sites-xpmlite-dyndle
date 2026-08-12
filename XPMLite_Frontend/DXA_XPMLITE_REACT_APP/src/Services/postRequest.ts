@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 import axiosClient from "../oauth/apiClient";
 import formatTcmId from "../utils/formatTcmId";
-import putService from "./putRquest";
+import putService from "./putRequest";
 import { AxiosResponse } from "axios";
 
 const postService = {
@@ -32,20 +32,22 @@ const postService = {
             }
         }
     },
-    updateComponent : async (tcmId: string, data: any): Promise<AxiosResponse | undefined> => {
+    updateComponent : async (tcmId: string, data: any, retryAttempted = false): Promise<AxiosResponse | undefined> => {
         const componentData = { ...data };
-        try{
+        try {
             const updateResponse = await putService.putRequest(tcmId, componentData);
             if (updateResponse.status === 200 && updateResponse.data?.Id) {
                 const checkInId = formatTcmId(updateResponse.data.Id)
                 return await postService.componentCheckIn(`${checkInId}/checkIn`);
-
             }
-            return updateResponse
-        }catch(error:any){
+            return updateResponse;
+        } catch(error: any) {
             console.error('Error during component update lifecycle:', error?.response?.data?.message || error);
-            componentData.Title = `${componentData.Title}-${dayjs().format('MM-DD-YYYY-hh-mm-ss')}`;
-            return await postService.updateComponent(tcmId, componentData);
+            if (!retryAttempted) {
+                componentData.Title = `${componentData.Title}-${dayjs().format('MM-DD-YYYY-hh-mm-ss')}`;
+                return await postService.updateComponent(tcmId, componentData, true);
+            }
+            throw error;
         }
     },
     componentCheckIn: async (url: string): Promise<AxiosResponse> => {

@@ -1,8 +1,8 @@
 import { DatePicker, DatePickerProps, Radio, RadioChangeEvent, Table, TableProps } from "antd";
 import dayjs, { Dayjs } from "dayjs";
 
-import { useAppDispatch, useAppSelector } from "../../store/connect";
-import { setPublishDate, setPublishingSchedule, setSelectedPublishingTarget } from "../../store/publish/publishSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setPublishDate, setPublishingSchedule, setSelectedPublishingTarget } from "../../store/slices/publishSlice";
 interface DataType {
     name: string,
     Id: string
