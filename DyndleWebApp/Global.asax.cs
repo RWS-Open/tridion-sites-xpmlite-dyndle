@@ -3,12 +3,14 @@ using System.IO;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Integration.Mvc;
 using DD4T.Core.Contracts.ViewModels;
 using DD4T.DI.Autofac;
 using Dyndle.Modules.Core;
+using Dyndle.Modules.Core.Configuration;
 using Dyndle.Modules.Core.Contracts;
 using DyndleWebApp.Controllers;
 using DyndleWebApp.Infrastructure;
@@ -24,26 +26,21 @@ namespace DyndleWebApp
             Bootstrap.Run();
               
             AreaRegistration.RegisterAllAreas();
-
-            // Register your routes FIRST — before Dyndle's
-            RouteTable.Routes.MapRoute(
-                name: "PageRoute",
-                url: "{*page}",
-                defaults: new { controller = "Page", action = "Page" },
-                namespaces: new[] { "DyndleWebApp.Controllers" }
-            ); 
+ 
 
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
+             
             var builder = new ContainerBuilder();
              
             foreach (var asm in Bootstrap.GetControllerAssemblies())
             {
                 builder.RegisterControllers(asm);
             }
+
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.Populate(Bootstrap.ServiceCollection);
             builder.UseDD4T();
+ 
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
@@ -66,8 +63,7 @@ namespace DyndleWebApp
                 // Log and continue — don't let this crash startup
                 System.Diagnostics.Trace.TraceError("ViewModelFactory error: " + ex.Message);
             }
-
-            Dyndle.Modules.Core.RouteConfig.RegisterRoutes(RouteTable.Routes);
+            // Dyndle.Modules.Core.RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
       /*  protected void Application_BeginRequest()

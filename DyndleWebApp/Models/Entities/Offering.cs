@@ -7,23 +7,26 @@ using System.Data.Services.Client;
 
 namespace DyndleWebApp.Models.Entities
 {
+    ///<summary>
+    /// Class is auto-generated from Tridion schema Dyndle Offering (tcm:6-10679-8)
+    /// Date: 7/26/2026 2:40:28 PM
+    /// </summary>
     [ContentModel("Offering", true)]
-    public class Offering : EntityModel
+    public partial class Offering : EntityModel
     {
         [TextField(FieldName = "headline")]
         public virtual string Headline { get; set; }
 
         [TextField(FieldName = "introduction")]
-        public virtual string introduction { get; set; }
+        public virtual string Introduction { get; set; }
 
+   //     [EmbeddedSchemaField(EmbeddedModelType = typeof(Paragraph))]
         [EmbeddedSchemaField(FieldName = "body")]
-        public virtual List<Paragraph> body { get; set; }
+        public virtual List<Paragraph> Body { get; set; }
 
-        // link is an Embedded Schema — map as EmbeddedSchemaField
+        //[EmbeddedSchemaField(EmbeddedModelType = typeof(EmbeddedLink))]
         [EmbeddedSchemaField(FieldName = "link")]
-        public virtual Link Link { get; set; }
-
-
+        public virtual EmbeddedLink Link { get; set; }
     }
 
 
