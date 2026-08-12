@@ -1,4 +1,4 @@
-# Configure and Build the DXA XPMLITE Inline Edit App
+# Configure and Build the XPMLITE Inline Edit App for Dyndle Webapp
 
 ## Prerequisites
 
