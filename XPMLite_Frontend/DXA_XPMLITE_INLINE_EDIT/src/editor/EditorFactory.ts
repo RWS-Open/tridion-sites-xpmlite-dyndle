@@ -1,4 +1,4 @@
-import contentCss from 'tinymce/skins/content/default/content.min.css?inline';
+/* import contentCss from 'tinymce/skins/content/default/content.min.css?inline';
 import skinCss from 'tinymce/skins/ui/oxide/skin.min.css?inline';
 import tinymce from 'tinymce/tinymce';
 
@@ -10,7 +10,8 @@ import 'tinymce/plugins/code';
 import 'tinymce/plugins/link';
 import 'tinymce/plugins/image';
 import 'tinymce/plugins/table';
-import 'tinymce/plugins/lists';
+import 'tinymce/plugins/lists'; */
+import { TinymceEditor } from './TinymceEditor';
 
 export class EditorFactory {
   private get actionButtons(): string {
@@ -81,8 +82,8 @@ export class EditorFactory {
 
     const textarea = valueElement.querySelector(`#${targetId}`) as HTMLTextAreaElement | null;
     if (textarea) textarea.value = rawContent;
-
-    if (tinymce.get(targetId)) {
+    TinymceEditor.initTinyMceEditor(targetId, rawContent)
+    /* if (tinymce.get(targetId)) {
       tinymce.execCommand('mceRemoveEditor', false, targetId);
     }
 
@@ -130,12 +131,12 @@ export class EditorFactory {
           }
         });
       }
-    });
+    }); */
   }
 
-  destroyEditor(editorId: string): void {
+  /* destroyEditor(editorId: string): void {
     if (tinymce.get(editorId)) {
       tinymce.execCommand('mceRemoveEditor', false, editorId);
     }
-  }
+  } */
 }

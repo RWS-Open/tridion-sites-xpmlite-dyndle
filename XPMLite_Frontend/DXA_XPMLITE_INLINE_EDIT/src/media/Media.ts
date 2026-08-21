@@ -139,9 +139,6 @@ export class Media {
         saveBtn.setAttribute("disabled", "true");
       }
       const parentRef = componentResponse?.BluePrintInfo?.PrimaryBluePrintParentItem?.IdRef;
-      if (!parentRef) {
-        throw new Error("Primary blueprint is missing.");
-      }
 
       const checkoutId = formatTcmId(parentRef);
       const checkoutResponse = await this.api.postService<XpmItem>(`/items/${checkoutId}/checkOut`, {});
@@ -262,10 +259,6 @@ export class Media {
       activeComponentResponse = componentResponse;
 
       const repoRef = componentResponse.BluePrintInfo?.OwningRepository?.IdRef;
-      if (!repoRef) {
-        throw new Error("Owning repository reference is missing.");
-      }
-
       const owningRepository = formatTcmId(repoRef);
 
       this.isLoading = true;
@@ -292,7 +285,7 @@ export class Media {
       if (modalBody) modalBody.innerHTML = "";
 
       const sidebar = this.dom.sidebar();
-      if (sidebar) sidebar.innerHTML = "<div style='color:red; padding:10px;'>Failed to load repository infrastructure structure.</div>";
+      if (sidebar) sidebar.innerHTML = "<div style='color:red; padding:10px;'>Failed to load repository structure.</div>";
     }
   }
 }

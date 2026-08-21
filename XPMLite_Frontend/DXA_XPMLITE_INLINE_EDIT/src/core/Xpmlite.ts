@@ -8,6 +8,7 @@ import { XpmApiService } from "../services/XpmApiService";
 import { ConfigService } from "../services/ConfigService";
 import { formatTcmId, safeJsonParse } from "../utils/utils";
 import tinymce from "tinymce/tinymce";
+import { TinymceEditor } from "../editor/TinymceEditor";
 
 export class Xpmlite {
   private auth: AuthService;
@@ -93,7 +94,8 @@ export class Xpmlite {
 
       if (targetEditor) {
         inputValue = targetEditor.getContent();
-        this.editorFactory.destroyEditor(editorId);
+        //this.editorFactory.destroyEditor(editorId);
+        TinymceEditor.destroyEditor(editorId)
       } else {
         inputValue = textareaInput.value;
       }
@@ -228,7 +230,7 @@ export class Xpmlite {
 
     const textarea = field.querySelector("textarea");
     if (textarea?.id) {
-      this.editorFactory.destroyEditor(textarea.id);
+      TinymceEditor.destroyEditor(textarea.id);
     }
 
     const cachedText = safeJsonParse<Record<string, Record<string, string>>>(localStorage.getItem("clonedText"), {});

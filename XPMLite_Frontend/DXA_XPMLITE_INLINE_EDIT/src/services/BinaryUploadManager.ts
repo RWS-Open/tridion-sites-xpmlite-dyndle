@@ -32,7 +32,7 @@ export class BinaryUploadManager {
       const binaryResponse = await this.api.postService<BinaryUploadResponse>(`/binary/upload`, payload);
       const payloadContainer = safeJsonParse<Record<string, unknown>>(JSON.stringify(containerData), { ...containerData });
 
-      payloadContainer.Title = file!.name;
+      payloadContainer.Title = file!.name.split(".")[0]+Date.now();
       payloadContainer.BinaryContent = {
         IsExternal: false,
         ExternalBinaryUri: "",

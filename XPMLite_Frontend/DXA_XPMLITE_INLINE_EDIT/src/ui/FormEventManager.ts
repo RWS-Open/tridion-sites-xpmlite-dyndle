@@ -8,6 +8,7 @@ import { FormStatusNotifier } from "./FormStatusNotifier";
 import type { ComponentContextResolver } from "../services/ComponentContextResolver";
 import type { FieldDefinition, SchemaLink, XpmItem } from "../types/xpm";
 import { formatTcmId, safeJsonParse } from "../utils/utils";
+import { TinymceEditor } from "../editor/TinymceEditor";
 
 export class FormEventManager {
 
@@ -126,9 +127,10 @@ export class FormEventManager {
     const removeBtn = target.closest<HTMLElement>(".xpm-remove-embedded-btn");
     if (!removeBtn) return false;
 
-    const currentItem = removeBtn.closest(".xpm-embedded-item");
+    const currentItem = removeBtn.closest(".xpm-embedded-item") as HTMLElement;
     const parentGroup = currentItem?.closest(".xpm-embedded-group");
     if (currentItem && parentGroup) {
+      SchemaFormRenderer.destroyXhtmlEditors(currentItem);
       currentItem.remove();
       this.updateRemoveButtonsAndAddState(parentGroup);
     }
@@ -147,10 +149,9 @@ export class FormEventManager {
       const subSchema = safeJsonParse<Record<string, FieldDefinition>>(rawSchema, {});
       const newItemEl = document.createElement("div");
       newItemEl.className = "xpm-embedded-item";
-      newItemEl.innerHTML = `
-        <button type="button" class="xpm-btn xpm-btn-danger xpm-remove-embedded-btn">Remove</button>
-        ${SchemaFormRenderer.generateFormFromSchema(subSchema)}`;
+      newItemEl.innerHTML = `<button type="button" class="xpm-btn xpm-btn-danger xpm-remove-embedded-btn">Remove</button>${SchemaFormRenderer.generateFormFromSchema(subSchema)}`;
       containerEl.appendChild(newItemEl);
+      SchemaFormRenderer.initEditors(newItemEl);
       this.updateRemoveButtonsAndAddState(groupEl);
     }
     return true;
@@ -172,27 +173,24 @@ export class FormEventManager {
 
       const newItemEl = document.createElement("div");
       newItemEl.className = "xpm-embedded-item";
-      const innerHtml =
-        type === "MultimediaLinkFieldDefinition"
-          ? `
+      const innerHtml = type === "MultimediaLinkFieldDefinition" ? `
         <div class="xpm-field" data-field-name="${fieldName}" data-field-type="${type}">
           <label>${label}</label>
           <div class="xpm-binary-upload">
             <input type="file" accept=".jpg,.jpeg,.png" data-role="binary-file" />
             <input type="hidden" data-role="binary-link" />
-            <button class="xpm-save-binary-btn" type="button"><svg version="1.1" fill="currentColor" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 11" width="16" height="16"><path d="M14.665 4.444h-1.332V3.111c0-.736-.597-1.333-1.333-1.333H7.556L5.778 0H1.333C.597 0 0 .597 0 1.333v8c0 .737.597 1.334 1.333 1.334H12.03c.78 0 1.504-.41 1.906-1.08l1.874-3.123a1.334 1.334 0 0 0-1.144-2.02zM1.333.89H5.41l1.777 1.778H12c.245 0 .444.199.444.444v1.333h-7.69c-.779 0-1.503.41-1.905 1.08L.89 8.79V1.333c0-.245.199-.444.444-.444zm13.714 5.117L13.173 9.13a1.333 1.333 0 0 1-1.144.648H1.245L3.523 5.98a1.333 1.333 0 0 1 1.144-.648h9.999c.345 0 .559.377.381.673z"></path></svg></button>
+            <button class="xpm-save-binary-btn" type="button"><svg version="1.1" fill="currentColor" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" width="16" height="16"><path d="M14.125 13.5C14.125 13.8438 13.8438 14.125 13.5 14.125C13.1562 14.125 12.875 13.8438 12.875 13.5C12.875 13.1562 13.1562 12.875 13.5 12.875C13.8438 12.875 14.125 13.1562 14.125 13.5ZM11.5 12.875C11.1562 12.875 10.875 13.1562 10.875 13.5C10.875 13.8438 11.1562 14.125 11.5 14.125C11.8438 14.125 12.125 13.8438 12.125 13.5C12.125 13.1562 11.8438 12.875 11.5 12.875ZM16 11.375V14.625C16 15.3844 15.3844 16 14.625 16H1.375C0.615625 16 0 15.3844 0 14.625V11.375C0 10.6156 0.615625 10 1.375 10H5.25V6.89687H3.60313C2.49063 6.89687 1.93438 5.55 2.71875 4.7625L7.11562 0.365625C7.60313 -0.121875 8.39375 -0.121875 8.88437 0.365625L13.2812 4.7625C14.0688 5.55 13.5094 6.89687 12.3969 6.89687H10.75V10H14.625C15.3844 10 16 10.6156 16 11.375ZM6.25 5.89688V11.75C6.25 11.8875 6.3625 12 6.5 12H9.5C9.6375 12 9.75 11.8875 9.75 11.75V5.89688H12.3969C12.6188 5.89688 12.7313 5.62812 12.575 5.46875L8.17813 1.07187C8.08125 0.975 7.92188 0.975 7.825 1.07187L3.42813 5.46875C3.27188 5.625 3.38125 5.89688 3.60625 5.89688H6.25ZM15 11.375C15 11.1687 14.8313 11 14.625 11H10.75V11.75C10.75 12.4406 10.1906 13 9.5 13H6.5C5.80937 13 5.25 12.4406 5.25 11.75V11H1.375C1.16875 11 1 11.1687 1 11.375V14.625C1 14.8313 1.16875 15 1.375 15H14.625C14.8313 15 15 14.8313 15 14.625V11.375Z"></path></svg></button>
           </div>
         </div>`
-          : `
+        : `
         <div class="xpm-field" data-field-name="${fieldName}" data-field-type="${type}">
           <label>${label}</label>
           <input type="text" data-role="value" />
         </div>`;
 
-      newItemEl.innerHTML = `
-        <button type="button" class="xpm-btn xpm-btn-danger xpm-remove-embedded-btn">Remove</button>
-        ${innerHtml}`;
+      newItemEl.innerHTML = `<button type="button" class="xpm-btn xpm-btn-danger xpm-remove-embedded-btn">Remove</button>${innerHtml}`;
       containerEl.appendChild(newItemEl);
+      SchemaFormRenderer.initEditors(newItemEl);
       this.updateRemoveButtonsAndAddState(groupEl);
     }
     return true;
@@ -218,6 +216,7 @@ export class FormEventManager {
   private bindSubmitHandler(form: HTMLFormElement, schemaObj: Record<string, FieldDefinition>, metadataSchemaObj: Record<string, FieldDefinition>, componentContainerData: Record<string, unknown>, selectedRegion: string = ""): void {
     form.addEventListener("submit", async (e: SubmitEvent) => {
       e.preventDefault();
+      TinymceEditor.triggerSave();
       if (!ValidationHelper.validateForm(form)) return;
 
       const submitBtn = form.querySelector<HTMLButtonElement>("button[type='submit']");
@@ -248,10 +247,7 @@ export class FormEventManager {
           const metadataSection = form.querySelector('[data-section="metadata"]');
           const metadataTarget = metadataSection?.querySelector('.xpm-collapsible-body') || metadataSection || form;
 
-          componentContainerData.Metadata = FormPayloadExtractor.extract(
-            metadataTarget,
-            metadataSchemaObj
-          );
+          componentContainerData.Metadata = FormPayloadExtractor.extract(metadataTarget, metadataSchemaObj);
         }
 
         const checkinResponse = await this.api.postService<XpmItem>(`/items?autoCheckIn=true`, componentContainerData);
@@ -267,7 +263,7 @@ export class FormEventManager {
         }
       } catch (err) {
         console.error("Failed to save component item:", err);
-        FormStatusNotifier.show(form, "An error occurred while saving. Please try again.", "error");
+        FormStatusNotifier.show(form, err as any, "error");
       }
       finally {
         if (submitBtn) {
