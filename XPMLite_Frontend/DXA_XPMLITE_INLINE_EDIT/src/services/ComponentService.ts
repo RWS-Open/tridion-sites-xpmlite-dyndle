@@ -114,7 +114,7 @@ export class ComponentService {
 			this.eventManager.bind(form, schemaFields, metadataSchemaFields, binaryContainerData as Record<string, unknown>, componentContainerData as Record<string, unknown>, selectedRegion);
 
 			this.modalService.open({
-				title: "Add Item to Component",
+				title: "Add New Component",
 				body: form,
 				closeOnOverlayClick: false,
 				onClose: () => {
