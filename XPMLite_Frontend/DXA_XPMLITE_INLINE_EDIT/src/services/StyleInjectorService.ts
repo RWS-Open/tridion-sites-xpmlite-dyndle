@@ -50,7 +50,7 @@ export class StyleInjectorService {
       .xpm-component-add-item:hover { background: #005959; }
       .xpm-field { margin-bottom: 12px; }
       .xpm-field label { display: inline-block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
-      .xpm-field input[type="text"], .xpm-field textarea, .xpm-field input[type="datetime-local"] { 
+      .xpm-field input[type="text"], .xpm-field textarea, .xpm-field input[type="datetime-local"], .xpm-field select{ 
         width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; 
       }
       .xpm-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }

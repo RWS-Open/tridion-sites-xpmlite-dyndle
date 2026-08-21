@@ -110,6 +110,7 @@ export class ComponentService {
 			}
 
 			const form = SchemaFormRenderer.createModalForm(compId, fieldsHtml);
+			
 			this.eventManager.bind(form, schemaFields, metadataSchemaFields, binaryContainerData as Record<string, unknown>, componentContainerData as Record<string, unknown>, selectedRegion);
 
 			this.modalService.open({
@@ -117,9 +118,11 @@ export class ComponentService {
 				body: form,
 				closeOnOverlayClick: false,
 				onClose: () => {
+					SchemaFormRenderer.destroyXhtmlEditors(form);
 					this.resetTriggerButton(triggerBtn);
 				}
 			});
+			SchemaFormRenderer.initEditors(form);
 		} catch (error) {
 			console.error("Failed to load component modal:", error);
 			this.resetTriggerButton(triggerBtn);

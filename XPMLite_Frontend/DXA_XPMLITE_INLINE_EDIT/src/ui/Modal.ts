@@ -43,7 +43,7 @@ export class ModalService {
       .xpm-modal-container {
         background: #fff;
         border-radius: 8px;
-        width: 480px;
+        width: 680px;
         max-width: 90vw;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         position: relative;

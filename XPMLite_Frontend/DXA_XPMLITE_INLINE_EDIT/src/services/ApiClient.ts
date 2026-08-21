@@ -1,3 +1,4 @@
+import { safeJsonParse } from "../utils/utils";
 import { AuthService } from "./AuthService";
 import { ConfigService } from "./ConfigService";
 
@@ -5,9 +6,9 @@ export class ApiError extends Error {
   public status: number;
   public url: string;
 
-  constructor(message: string, status: number, url: string) {
+  constructor(message: string, status: number, url: string, _responseData: any) {
     super(message);
-    this.name = "ApiError";
+    this.name = "Error";
     this.status = status;
     this.url = url;
   }
@@ -86,7 +87,20 @@ export class ApiClient {
       const response = await fetch(targetUrl, requestOptions);
 
       if (!response.ok) {
-        throw new ApiError(`HTTP Error Status: ${response.status}`, response.status, targetUrl);
+        let errorData: any = null;
+        try {
+          const text = await response.text();
+          errorData = safeJsonParse(text, text);
+        } catch {
+          // Fallback if parsing fails
+          //throw new ApiError(`HTTP Error Status: ${response.status}`, response.status, targetUrl);
+        }
+        const backendMessage =
+          (typeof errorData === "object" && (errorData?.message || errorData?.Message || errorData?.error)) ||
+          (typeof errorData === "string" ? errorData : null) ||
+          `HTTP Error Status: ${response.status}`;
+
+        throw new ApiError(backendMessage, response.status, targetUrl, errorData);
       }
 
       if (responseType === "blob") {
